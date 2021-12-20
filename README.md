@@ -38,6 +38,4 @@ Additionally:
 
 ##Screenshots
 
-![alt text](screenshots/screen-mobi.png "This is a view on a mobile device")
-
-![alt text](screenshots/screen-desk.png "This is a view on a desktop")
+![alt text](screenshots/screen-mobi.png "This is a view on a mobile device") ![alt text](screenshots/screen-desk.png "This is a view on a desktop")
