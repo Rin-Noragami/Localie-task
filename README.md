@@ -35,8 +35,3 @@ Additionally:
 3. Edit the task
 4. Delete the task
 5. Select the task
-
-##Screenshots
-
-![alt text](screenshots/screen-mobi.png "This is a view on a mobile device")
-![alt text](screenshots/screen-desk.jpg "This is a view on a desktop")
