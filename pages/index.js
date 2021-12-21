@@ -2,18 +2,23 @@ import FormInput from "./components/FormInput";
 import List from "./components/List";
 import Footer from "./components/Footer";
 import { DataProvider } from "./components/DataProvider";
+import Title from "../style/Title"
+import AppTodostyle from "../style/AppToDo"
+
 
 function AppTodo() {
   return (
     <DataProvider>
-      <div className="AppTodo">
-        <h1>Task list</h1>
+      <AppTodostyle>
+        <Title>Task list</Title>
         <FormInput />
         <List />
         <Footer />
-      </div>
+      </AppTodostyle>
     </DataProvider>
   );
 }
+
+
 
 export default AppTodo;
