@@ -1,5 +1,10 @@
 import { useContext, useState } from "react";
 import { DataContext } from "./DataProvider";
+import Button from "../../style/Button";
+import ButtonEdDel from "../../style/ButtonEditDelete";
+import Row from "../../style/Row";
+import Htwo from "../../style/Htwo";
+import Label from "../../style/LableCursor";
 
 export default function Footer() {
   const [checkAll, setCheckAll] = useState(false);
@@ -28,10 +33,10 @@ export default function Footer() {
   return (
     <>
       {todos.length === 0 ? (
-        <h2>You have no tasks</h2>
+        <Htwo>You have no tasks</Htwo>
       ) : (
-        <div className="row">
-          <label htmlFor="all">
+        <Row>
+          <Label htmlFor="all">
             <input
               type="checkbox"
               name="all"
@@ -40,12 +45,12 @@ export default function Footer() {
               checked={checkAll}
             />
             All
-          </label>
+          </Label>
           <p>You have {newTodosComplete().length} task</p>
-          <button id="delete" onClick={deleteTodo}>
+          <ButtonEdDel id="delete" onClick={deleteTodo}>
             Delete
-          </button>
-        </div>
+          </ButtonEdDel>
+        </Row>
       )}
     </>
   );

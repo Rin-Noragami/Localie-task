@@ -5,7 +5,8 @@ const Title = styled.h1`
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 900;
-  color: rgb(200, 200, 200);
+  color: ${(props) => props.theme.BorColor};
+  padding-bottom:10px;
 `;
 
 export default Title

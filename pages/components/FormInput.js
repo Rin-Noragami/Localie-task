@@ -1,6 +1,9 @@
 import { useState, useContext } from "react";
-import StyleForm from "../../style/Form"; 
+import Form from "../../style/Form"; 
+import Button from "../../style/Button";
+import Inputstyle from "../../style/Inputstyle";
 import { DataContext } from "./DataProvider";
+
 
 export default function FormInput() {
   const [todos, setTodos] = useContext(DataContext);
@@ -13,9 +16,8 @@ export default function FormInput() {
   };
 
   return (
-    <StyleForm>
-      <form autoComplete="off" onSubmit={addTodo}>
-        <input
+      <Form autoComplete="off" onSubmit={addTodo}>
+        <Inputstyle
           type="text"
           name="todos"
           id="todos"
@@ -24,8 +26,7 @@ export default function FormInput() {
           value={todoName}
           onChange={(e) => setTodoName(e.target.value.toLowerCase())}
         />
-        <button type="submit">Create</button>
-      </form>
-    </StyleForm>
+        <Button type="submit">Create</Button>
+      </Form>
   );
 }

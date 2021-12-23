@@ -1,4 +1,7 @@
 import { useState } from "react";
+import ButtonEdDel from "../../style/ButtonEditDelete";
+import Line from "../../style/Line";
+import RowInput from "../../style/RowInput";
 
 export default function ListItem({todo, id, checkComplete,handleEditTodos}) {
   const [onEdit, setOnEdit] = useState(false)
@@ -19,25 +22,25 @@ export default function ListItem({todo, id, checkComplete,handleEditTodos}) {
 
   if(onEdit){
     return (
-      <li>
-          <input type="text" id="editValue" value={editValue} name="editValue" 
+      <Line>
+          <RowInput type="text" id="editValue" value={editValue} name="editValue" 
             onChange={e=> setEditValue(e.target.value.toLowerCase())}
           />
-        <button onClick={()=>handleSave(id)}>Save</button>
-      </li>
+        <ButtonEdDel Edit onClick={()=>handleSave(id)}>Save</ButtonEdDel>
+      </Line>
     );
   } else {
     return (
-      <li>
+      <Line>
         <label htmlFor={id} className={todo.complete ? "active":""}>
-          <input type="checkbox" id={id} checked={todo.complete}
+          <RowInput type="checkbox" id={id} checked={todo.complete}
             onChange={()=>checkComplete(id)}
           />
           {todo.name}
         </label>
-        <button disabled={todo.complete}
-        onClick={handleOnEdit}>Edit</button>
-      </li>
+        <ButtonEdDel Edit disabled={todo.complete}
+        onClick={handleOnEdit}>Edit</ButtonEdDel>
+      </Line>
     );
   }
 
